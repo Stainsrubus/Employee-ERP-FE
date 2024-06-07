@@ -284,7 +284,7 @@ const handleCloseDetails = () => {
                 <option value="">Select Project Head</option>
                 {employees.map((employee) => (
                   <option key={employee._id} value={employee._id}>
-                    {employee.name} - {employee.role}
+                    {employee.name} - {employee.designation}
                   </option>
                 ))}
               </select>
@@ -324,7 +324,7 @@ const handleCloseDetails = () => {
                           className="mr-2"
                         />
                         <label>
-                          {employee.name} - {employee.role}
+                          {employee.name} - {employee.designation}
                         </label>
                       </div>
                     ))}
