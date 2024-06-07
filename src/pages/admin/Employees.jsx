@@ -21,6 +21,7 @@ function Employee() {
     department: "",
     ctc: "",
     doj: "",
+    role:"",
     status: "",
     noticePeriod: "",
     attendance: []

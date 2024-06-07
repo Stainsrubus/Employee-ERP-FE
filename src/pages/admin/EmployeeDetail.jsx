@@ -24,6 +24,7 @@ const navigate = useNavigate()
         if (res.status === 200) {
           setEmployee(res.data.employee);
           setFormData(res.data.employee);
+          console.log(employee)
         }
       } catch (error) {
         console.error('Error fetching employee details:', error);
@@ -55,7 +56,7 @@ const navigate = useNavigate()
       email: formData.email,
       mobile: formData.mobile,
       ctc: formData.ctc,
-      doj: formData.doj,
+      role: formData.role,
       noticePeriod: formData.noticePeriod,
       gender: formData.gender, 
       status: formData.status 
@@ -211,20 +212,20 @@ const navigate = useNavigate()
             <span className="ml-2">{employee.ctc}</span>
           )}
         </div>
-        {/* <div className="flex justify-between mb-4">
-          <label className="text-gray-700"><strong>Date of Joining:</strong></label>
+        <div className="flex justify-between mb-4">
+          <label className="text-gray-700"><strong>Role:</strong></label>
           {isEditing ? (
             <input
-              type="date"
-              name="doj"
-              value={new Date(formData.doj).toISOString().split('T')[0]}
+              type="text"
+              name="role"
+              value={formData.role}
               onChange={handleInputChange}
               className="ml-2 block w-2/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
           ) : (
-            <span className="ml-2">{new Date(employee.doj).toLocaleDateString()}</span>
+            <span className="ml-2">{employee.role}</span>
           )}
-        </div> */}
+        </div> 
         <div className="flex justify-between mb-4">
           <label className="text-gray-700"><strong>Notice Period:</strong></label>
           {isEditing ? (
