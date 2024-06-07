@@ -80,6 +80,7 @@ function Employee() {
           ctc: "",
           doj: "",
           status: "",
+          role:"",
           noticePeriod: "",
           attendance: []
         });
@@ -322,6 +323,20 @@ function Employee() {
                     <option value="">Select Status</option>
                     <option value="Active">Active</option>
                     <option value="Inactive">Inactive</option>
+                  </select>
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 mb-2">Role:</label>
+                  <select
+                    name="role"
+                    value={newEmployee.role}
+                    onChange={handleInputChange}
+                    className="border p-2 rounded-md w-full"
+                    required
+                  >
+                    <option value="">Select Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Employee">Employee</option>
                   </select>
                 </div>
                 <div className="mb-4">
